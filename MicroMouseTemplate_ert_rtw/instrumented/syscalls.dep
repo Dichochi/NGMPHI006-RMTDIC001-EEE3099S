@@ -1,0 +1,2 @@
+syscalls.o: \
+ C:/Users/user/Documents/GitHub/EEE3099S/Mmouse/MicroMouseProgramming/STM32CubeIDE/Application/User/Core/instrumented/syscalls.c
