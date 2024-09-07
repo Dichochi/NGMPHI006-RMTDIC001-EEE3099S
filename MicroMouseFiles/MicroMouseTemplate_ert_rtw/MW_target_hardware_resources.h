@@ -25,7 +25,7 @@
 #define MW_STM32CUBEMX_PROJECTFILEBUTTON 
 #define MW_STM32CUBEMX_CREATEPROJECTFILEBUTTON 
 #define MW_STM32CUBEMX_LAUNCHPROJECTFILEBUTTON 
-#define MW_STM32CUBEMX_PROJECTFILE C:/Users/user/Documents/GitHub/EEE3099S/Mmouse/MicroMouseProgramming/MicroMouseProgramming.ioc
+#define MW_STM32CUBEMX_PROJECTFILE C:/Users/phila/OneDrive - University of Cape Town/Books/EEE3099S/MicroMouseFiles/MicroMouseProgramming/MicroMouseProgramming.ioc
 #define MW_STM32CUBEMX_DEVICEID STM32L476V(C-E-G)Tx
 #define MW_STM32CUBEMX_FAMILY STM32L4
 #define MW_STM32CUBEMX_CONNECTIVITYMODE 0

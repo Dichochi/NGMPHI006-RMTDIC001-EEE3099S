@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'MicroMouseTemplate'.
  *
- * Model version                  : 3.0
+ * Model version                  : 3.16
  * Simulink Coder version         : 24.1 (R2024a) 19-Nov-2023
- * C/C++ source code generated on : Sat Sep  7 15:24:06 2024
+ * C/C++ source code generated on : Sat Sep  7 21:24:03 2024
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -21,40 +21,15 @@
 
 /* Block parameters (default storage) */
 P_MicroMouseTemplate_T MicroMouseTemplate_P = {
-  /* Expression: 0
-   * Referenced by: '<S5>/Constant4'
+  /* Expression: 0.01
+   * Referenced by: '<Root>/Quantizer'
    */
-  0.0,
+  0.01,
 
-  /* Expression: 1
-   * Referenced by: '<S5>/Constant2'
+  /* Expression: 0.5
+   * Referenced by: '<S5>/Gain'
    */
-  1.0,
-
-  /* Expression: 0
-   * Referenced by: '<S5>/Constant6'
-   */
-  0.0,
-
-  /* Expression: 1
-   * Referenced by: '<S5>/Constant5'
-   */
-  1.0,
-
-  /* Expression: 0
-   * Referenced by: '<S5>/Switch2'
-   */
-  0.0,
-
-  /* Expression: 2
-   * Referenced by: '<S5>/Constant3'
-   */
-  2.0,
-
-  /* Expression: 1
-   * Referenced by: '<S8>/Constant'
-   */
-  1.0,
+  0.5,
 
   /* Expression: 1
    * Referenced by: '<S5>/Constant'
@@ -62,12 +37,37 @@ P_MicroMouseTemplate_T MicroMouseTemplate_P = {
   1.0,
 
   /* Expression: 0
-   * Referenced by: '<S4>/Constant1'
+   * Referenced by: '<S5>/Constant1'
+   */
+  0.0,
+
+  /* Expression: 2
+   * Referenced by: '<S5>/LEFT'
+   */
+  2.0,
+
+  /* Expression: 2
+   * Referenced by: '<S5>/RIGHT'
+   */
+  2.0,
+
+  /* Expression: 1
+   * Referenced by: '<S4>/Constant'
+   */
+  1.0,
+
+  /* Expression: 1
+   * Referenced by: '<S8>/Constant'
+   */
+  1.0,
+
+  /* Expression: 0
+   * Referenced by: '<S3>/Constant1'
    */
   0.0,
 
   /* Expression: 1
-   * Referenced by: '<S4>/Constant'
+   * Referenced by: '<S3>/Constant'
    */
   1.0,
 
@@ -91,10 +91,10 @@ P_MicroMouseTemplate_T MicroMouseTemplate_P = {
    */
   0.0F,
 
-  /* Computed Parameter: DataStoreMemory1_InitialValue_j
-   * Referenced by: '<S1>/Data Store Memory1'
+  /* Computed Parameter: Gain_Gain_o
+   * Referenced by: '<Root>/Gain'
    */
-  0U,
+  54080U,
 
   /* Computed Parameter: Constant_Value_b
    * Referenced by: '<S45>/Constant'
@@ -121,10 +121,10 @@ P_MicroMouseTemplate_T MicroMouseTemplate_P = {
    */
   0U,
 
-  /* Computed Parameter: Switch1_Threshold
-   * Referenced by: '<S5>/Switch1'
+  /* Computed Parameter: DataStoreMemory1_InitialValue_j
+   * Referenced by: '<S1>/Data Store Memory1'
    */
-  2233U,
+  0U,
 
   /* Computed Parameter: DataStoreMemory_InitialValue_p4
    * Referenced by: '<S1>/Data Store Memory'

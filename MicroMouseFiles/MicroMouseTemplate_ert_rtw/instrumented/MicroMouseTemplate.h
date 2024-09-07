@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'MicroMouseTemplate'.
  *
- * Model version                  : 3.0
+ * Model version                  : 3.16
  * Simulink Coder version         : 24.1 (R2024a) 19-Nov-2023
- * C/C++ source code generated on : Sat Sep  7 15:24:06 2024
+ * C/C++ source code generated on : Sat Sep  7 21:24:03 2024
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -72,17 +72,16 @@ typedef struct {
   uint16_T CastToDouble[8];            /* '<S50>/Cast To Double' */
   uint16_T Flip[8];                    /* '<S6>/Flip' */
   GPIO_TypeDef * portNameLoc;
-  real_T LED0;                         /* '<S5>/MotorControl' */
-  real_T LFORWARD;                     /* '<S5>/MotorControl' */
-  real_T RBACK;                        /* '<S5>/MotorControl' */
-  real_T RFORWARD;                     /* '<S5>/MotorControl' */
-  real_T LBACK;                        /* '<S5>/MotorControl' */
-  real_T LED2;                         /* '<S5>/MotorControl' */
-  real_T LED1;                         /* '<S5>/MotorControl' */
+  real_T RW_F;                         /* '<S5>/SENSOR_OUTPUT_Processing' */
+  real_T RW_B;                         /* '<S5>/SENSOR_OUTPUT_Processing' */
+  real_T LW_F;                         /* '<S5>/SENSOR_OUTPUT_Processing' */
+  real_T LW_B;                         /* '<S5>/SENSOR_OUTPUT_Processing' */
   real_T maxV;
   real_T maxV_m;
   real_T maxV_c;
-  boolean_T LED0_f;                    /* '<Root>/HelloMicroMouse!' */
+  boolean_T LED0;                      /* '<S5>/SENSOR_OUTPUT_Processing' */
+  boolean_T LED2;                      /* '<S5>/SENSOR_OUTPUT_Processing' */
+  boolean_T LED1;                      /* '<S5>/SENSOR_OUTPUT_Processing' */
   B_MATLABSystem1_MicroMouseTem_T MATLABSystem6;/* '<S48>/MATLAB System1' */
   B_MATLABSystem1_MicroMouseTem_T MATLABSystem5;/* '<S48>/MATLAB System1' */
   B_MATLABSystem1_MicroMouseTem_T MATLABSystem4_c;/* '<S48>/MATLAB System1' */
@@ -100,19 +99,14 @@ typedef struct {
 /* Block states (default storage) for system '<Root>' */
 typedef struct {
   stm32cube_blocks_AnalogInput__T obj; /* '<S47>/Analog to Digital Converter' */
-  stm32cube_blocks_PWMOutput_Mi_T obj_g;/* '<S43>/PWM Output' */
-  stm32cube_blocks_PWMOutput_Mi_T obj_n;/* '<S41>/PWM Output' */
+  stm32cube_blocks_PWMOutput_Mi_T obj_g;/* '<S42>/PWM Output' */
+  stm32cube_blocks_PWMOutput_Mi_T obj_n;/* '<S40>/PWM Output' */
   struct {
-    uint_T is_c1_MicroMouseTemplate:2; /* '<S5>/MotorControl' */
-    uint_T is_FORWARDMOVE:2;           /* '<S5>/MotorControl' */
-    uint_T is_c2_MicroMouseTemplate:2; /* '<Root>/HelloMicroMouse!' */
-    uint_T is_ButtonPressed:2;         /* '<Root>/HelloMicroMouse!' */
-    uint_T is_active_c1_MicroMouseTemplate:1;/* '<S5>/MotorControl' */
-    uint_T is_active_c2_MicroMouseTemplate:1;/* '<Root>/HelloMicroMouse!' */
+    uint_T is_c3_MicroMouseTemplate:3; /* '<S5>/SENSOR_OUTPUT_Processing' */
+    uint_T is_active_c3_MicroMouseTemplate:1;/* '<S5>/SENSOR_OUTPUT_Processing' */
   } bitsForTID0;
 
-  uint8_T temporalCounter_i1;          /* '<S5>/MotorControl' */
-  uint8_T temporalCounter_i1_h;        /* '<Root>/HelloMicroMouse!' */
+  uint8_T temporalCounter_i1;          /* '<S5>/SENSOR_OUTPUT_Processing' */
   DW_MATLABSystem1_MicroMouseTe_T MATLABSystem6;/* '<S48>/MATLAB System1' */
   DW_MATLABSystem1_MicroMouseTe_T MATLABSystem5;/* '<S48>/MATLAB System1' */
   DW_MATLABSystem1_MicroMouseTe_T MATLABSystem4_c;/* '<S48>/MATLAB System1' */
@@ -143,35 +137,35 @@ struct P_MATLABSystem3_MicroMouseTem_T_ {
 
 /* Parameters (default storage) */
 struct P_MicroMouseTemplate_T_ {
-  real_T Constant4_Value;              /* Expression: 0
-                                        * Referenced by: '<S5>/Constant4'
+  real_T Quantizer_Interval;           /* Expression: 0.01
+                                        * Referenced by: '<Root>/Quantizer'
                                         */
-  real_T Constant2_Value;              /* Expression: 1
-                                        * Referenced by: '<S5>/Constant2'
-                                        */
-  real_T Constant6_Value;              /* Expression: 0
-                                        * Referenced by: '<S5>/Constant6'
-                                        */
-  real_T Constant5_Value;              /* Expression: 1
-                                        * Referenced by: '<S5>/Constant5'
-                                        */
-  real_T Switch2_Threshold;            /* Expression: 0
-                                        * Referenced by: '<S5>/Switch2'
-                                        */
-  real_T Constant3_Value;              /* Expression: 2
-                                        * Referenced by: '<S5>/Constant3'
+  real_T Gain_Gain;                    /* Expression: 0.5
+                                        * Referenced by: '<S5>/Gain'
                                         */
   real_T Constant_Value;               /* Expression: 1
-                                        * Referenced by: '<S8>/Constant'
-                                        */
-  real_T Constant_Value_l;             /* Expression: 1
                                         * Referenced by: '<S5>/Constant'
                                         */
   real_T Constant1_Value;              /* Expression: 0
-                                        * Referenced by: '<S4>/Constant1'
+                                        * Referenced by: '<S5>/Constant1'
+                                        */
+  real_T LEFT_Threshold;               /* Expression: 2
+                                        * Referenced by: '<S5>/LEFT'
+                                        */
+  real_T RIGHT_Threshold;              /* Expression: 2
+                                        * Referenced by: '<S5>/RIGHT'
+                                        */
+  real_T Constant_Value_l;             /* Expression: 1
+                                        * Referenced by: '<S4>/Constant'
+                                        */
+  real_T Constant_Value_i;             /* Expression: 1
+                                        * Referenced by: '<S8>/Constant'
+                                        */
+  real_T Constant1_Value_b;            /* Expression: 0
+                                        * Referenced by: '<S3>/Constant1'
                                         */
   real_T Constant_Value_a;             /* Expression: 1
-                                        * Referenced by: '<S4>/Constant'
+                                        * Referenced by: '<S3>/Constant'
                                         */
   int32_T DataStoreMemory2_InitialValue;
                             /* Computed Parameter: DataStoreMemory2_InitialValue
@@ -189,10 +183,9 @@ struct P_MicroMouseTemplate_T_ {
                             /* Computed Parameter: DataStoreMemory1_InitialValue
                              * Referenced by: '<S7>/Data Store Memory1'
                              */
-  uint16_T DataStoreMemory1_InitialValue_j;
-                          /* Computed Parameter: DataStoreMemory1_InitialValue_j
-                           * Referenced by: '<S1>/Data Store Memory1'
-                           */
+  uint16_T Gain_Gain_o;                /* Computed Parameter: Gain_Gain_o
+                                        * Referenced by: '<Root>/Gain'
+                                        */
   uint16_T Constant_Value_b;           /* Computed Parameter: Constant_Value_b
                                         * Referenced by: '<S45>/Constant'
                                         */
@@ -211,9 +204,10 @@ struct P_MicroMouseTemplate_T_ {
                           /* Computed Parameter: DataStoreMemory2_InitialValue_p
                            * Referenced by: '<S6>/Data Store Memory2'
                            */
-  uint16_T Switch1_Threshold;          /* Computed Parameter: Switch1_Threshold
-                                        * Referenced by: '<S5>/Switch1'
-                                        */
+  uint16_T DataStoreMemory1_InitialValue_j;
+                          /* Computed Parameter: DataStoreMemory1_InitialValue_j
+                           * Referenced by: '<S1>/Data Store Memory1'
+                           */
   boolean_T DataStoreMemory_InitialValue_p4;
                           /* Computed Parameter: DataStoreMemory_InitialValue_p4
                            * Referenced by: '<S1>/Data Store Memory'
@@ -260,10 +254,10 @@ extern real32_T IMU_Accel[3];          /* '<S7>/Data Store Memory' */
 extern real32_T IMU_Gyro[3];           /* '<S7>/Data Store Memory1' */
 extern int32_T currTicksRS;            /* '<S1>/Data Store Memory2' */
 extern int32_T currTicksLS;            /* '<S1>/Data Store Memory4' */
-extern uint16_T Thresholds[8];         /* '<S1>/Data Store Memory1' */
 extern uint16_T ADC1s[9];              /* '<S6>/Data Store Memory' */
 extern uint16_T ADC_H[9];              /* '<S6>/Data Store Memory1' */
 extern uint16_T ADC_L[9];              /* '<S6>/Data Store Memory2' */
+extern uint16_T Thresholds[8];         /* '<S1>/Data Store Memory1' */
 extern boolean_T Detections[8];        /* '<S1>/Data Store Memory' */
 
 /* Model entry point functions */
@@ -302,9 +296,9 @@ extern volatile boolean_T runModel;
  * '<Root>' : 'MicroMouseTemplate'
  * '<S1>'   : 'MicroMouseTemplate/Detections and Thresholds'
  * '<S2>'   : 'MicroMouseTemplate/GPIO for IR LEDs'
- * '<S3>'   : 'MicroMouseTemplate/HelloMicroMouse!'
- * '<S4>'   : 'MicroMouseTemplate/IR LED Pattern'
- * '<S5>'   : 'MicroMouseTemplate/Motors'
+ * '<S3>'   : 'MicroMouseTemplate/IR LED Pattern'
+ * '<S4>'   : 'MicroMouseTemplate/Motors'
+ * '<S5>'   : 'MicroMouseTemplate/Sensors'
  * '<S6>'   : 'MicroMouseTemplate/Subsystem'
  * '<S7>'   : 'MicroMouseTemplate/Subsystem1'
  * '<S8>'   : 'MicroMouseTemplate/Subsystem2'
@@ -334,15 +328,15 @@ extern volatile boolean_T runModel;
  * '<S32>'  : 'MicroMouseTemplate/GPIO for IR LEDs/LED_RIGHT/ECSoC'
  * '<S33>'  : 'MicroMouseTemplate/GPIO for IR LEDs/LED_RIGHT/ECSoC/ECSimCodegen'
  * '<S34>'  : 'MicroMouseTemplate/Motors/MOTOR_EN'
- * '<S35>'  : 'MicroMouseTemplate/Motors/MotorControl'
- * '<S36>'  : 'MicroMouseTemplate/Motors/PWM Output'
- * '<S37>'  : 'MicroMouseTemplate/Motors/PWM Output1'
- * '<S38>'  : 'MicroMouseTemplate/Motors/MOTOR_EN/ECSoC'
- * '<S39>'  : 'MicroMouseTemplate/Motors/MOTOR_EN/ECSoC/ECSimCodegen'
- * '<S40>'  : 'MicroMouseTemplate/Motors/PWM Output/ECSoC'
- * '<S41>'  : 'MicroMouseTemplate/Motors/PWM Output/ECSoC/ECSimCodegen'
- * '<S42>'  : 'MicroMouseTemplate/Motors/PWM Output1/ECSoC'
- * '<S43>'  : 'MicroMouseTemplate/Motors/PWM Output1/ECSoC/ECSimCodegen'
+ * '<S35>'  : 'MicroMouseTemplate/Motors/PWM Output'
+ * '<S36>'  : 'MicroMouseTemplate/Motors/PWM Output1'
+ * '<S37>'  : 'MicroMouseTemplate/Motors/MOTOR_EN/ECSoC'
+ * '<S38>'  : 'MicroMouseTemplate/Motors/MOTOR_EN/ECSoC/ECSimCodegen'
+ * '<S39>'  : 'MicroMouseTemplate/Motors/PWM Output/ECSoC'
+ * '<S40>'  : 'MicroMouseTemplate/Motors/PWM Output/ECSoC/ECSimCodegen'
+ * '<S41>'  : 'MicroMouseTemplate/Motors/PWM Output1/ECSoC'
+ * '<S42>'  : 'MicroMouseTemplate/Motors/PWM Output1/ECSoC/ECSimCodegen'
+ * '<S43>'  : 'MicroMouseTemplate/Sensors/SENSOR_OUTPUT_Processing'
  * '<S44>'  : 'MicroMouseTemplate/Subsystem/ADC2 IN10  IN1'
  * '<S45>'  : 'MicroMouseTemplate/Subsystem/get Highs and Lows'
  * '<S46>'  : 'MicroMouseTemplate/Subsystem/ADC2 IN10  IN1/ECSoC'
