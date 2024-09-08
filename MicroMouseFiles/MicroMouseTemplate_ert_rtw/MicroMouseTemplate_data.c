@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'MicroMouseTemplate'.
  *
- * Model version                  : 3.16
+ * Model version                  : 3.18
  * Simulink Coder version         : 24.1 (R2024a) 19-Nov-2023
- * C/C++ source code generated on : Sat Sep  7 21:24:03 2024
+ * C/C++ source code generated on : Sun Sep  8 01:48:25 2024
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -21,6 +21,16 @@
 
 /* Block parameters (default storage) */
 P_MicroMouseTemplate_T MicroMouseTemplate_P = {
+  /* Expression: 0
+   * Referenced by: '<S3>/Constant1'
+   */
+  0.0,
+
+  /* Expression: 1
+   * Referenced by: '<S3>/Constant'
+   */
+  1.0,
+
   /* Expression: 0.01
    * Referenced by: '<Root>/Quantizer'
    */
@@ -30,6 +40,16 @@ P_MicroMouseTemplate_T MicroMouseTemplate_P = {
    * Referenced by: '<S5>/Gain'
    */
   0.5,
+
+  /* Expression: 0
+   * Referenced by: '<S3>/Switch1'
+   */
+  0.0,
+
+  /* Expression: 0
+   * Referenced by: '<S3>/Switch'
+   */
+  0.0,
 
   /* Expression: 1
    * Referenced by: '<S5>/Constant'
@@ -61,16 +81,6 @@ P_MicroMouseTemplate_T MicroMouseTemplate_P = {
    */
   1.0,
 
-  /* Expression: 0
-   * Referenced by: '<S3>/Constant1'
-   */
-  0.0,
-
-  /* Expression: 1
-   * Referenced by: '<S3>/Constant'
-   */
-  1.0,
-
   /* Computed Parameter: DataStoreMemory2_InitialValue
    * Referenced by: '<S1>/Data Store Memory2'
    */
@@ -97,12 +107,12 @@ P_MicroMouseTemplate_T MicroMouseTemplate_P = {
   54080U,
 
   /* Computed Parameter: Constant_Value_b
-   * Referenced by: '<S45>/Constant'
+   * Referenced by: '<S46>/Constant'
    */
   0U,
 
   /* Computed Parameter: Constant1_Value_c
-   * Referenced by: '<S45>/Constant1'
+   * Referenced by: '<S46>/Constant1'
    */
   0U,
 
@@ -131,49 +141,71 @@ P_MicroMouseTemplate_T MicroMouseTemplate_P = {
    */
   false,
 
-  /* Start of '<S50>/MATLAB System6' */
+  /* Start of '<S51>/MATLAB System6' */
   {
     /* Expression: 0
-     * Referenced by: '<S50>/MATLAB System6'
+     * Referenced by: '<S51>/MATLAB System6'
      */
     0.0
   }
   ,
 
-  /* End of '<S50>/MATLAB System6' */
+  /* End of '<S51>/MATLAB System6' */
 
-  /* Start of '<S50>/MATLAB System5' */
+  /* Start of '<S51>/MATLAB System5' */
   {
     /* Expression: 0
-     * Referenced by: '<S50>/MATLAB System5'
+     * Referenced by: '<S51>/MATLAB System5'
      */
     0.0
   }
   ,
 
-  /* End of '<S50>/MATLAB System5' */
+  /* End of '<S51>/MATLAB System5' */
 
-  /* Start of '<S50>/MATLAB System4' */
+  /* Start of '<S51>/MATLAB System4' */
   {
     /* Expression: 0
-     * Referenced by: '<S50>/MATLAB System4'
+     * Referenced by: '<S51>/MATLAB System4'
      */
     0.0
   }
   ,
 
-  /* End of '<S50>/MATLAB System4' */
+  /* End of '<S51>/MATLAB System4' */
 
-  /* Start of '<S50>/MATLAB System3' */
+  /* Start of '<S51>/MATLAB System3' */
   {
     /* Expression: 0
-     * Referenced by: '<S50>/MATLAB System3'
+     * Referenced by: '<S51>/MATLAB System3'
      */
     0.0
   }
   ,
 
-  /* End of '<S50>/MATLAB System3' */
+  /* End of '<S51>/MATLAB System3' */
+
+  /* Start of '<S51>/MATLAB System2' */
+  {
+    /* Expression: 0
+     * Referenced by: '<S51>/MATLAB System2'
+     */
+    0.0
+  }
+  ,
+
+  /* End of '<S51>/MATLAB System2' */
+
+  /* Start of '<S51>/MATLAB System1' */
+  {
+    /* Expression: 0
+     * Referenced by: '<S51>/MATLAB System1'
+     */
+    0.0
+  }
+  ,
+
+  /* End of '<S51>/MATLAB System1' */
 
   /* Start of '<S50>/MATLAB System2' */
   {
@@ -197,6 +229,28 @@ P_MicroMouseTemplate_T MicroMouseTemplate_P = {
 
   /* End of '<S50>/MATLAB System1' */
 
+  /* Start of '<S49>/MATLAB System4' */
+  {
+    /* Expression: 0
+     * Referenced by: '<S49>/MATLAB System4'
+     */
+    0.0
+  }
+  ,
+
+  /* End of '<S49>/MATLAB System4' */
+
+  /* Start of '<S49>/MATLAB System3' */
+  {
+    /* Expression: 0
+     * Referenced by: '<S49>/MATLAB System3'
+     */
+    0.0
+  }
+  ,
+
+  /* End of '<S49>/MATLAB System3' */
+
   /* Start of '<S49>/MATLAB System2' */
   {
     /* Expression: 0
@@ -215,51 +269,7 @@ P_MicroMouseTemplate_T MicroMouseTemplate_P = {
      */
     0.0
   }
-  ,
-
   /* End of '<S49>/MATLAB System1' */
-
-  /* Start of '<S48>/MATLAB System4' */
-  {
-    /* Expression: 0
-     * Referenced by: '<S48>/MATLAB System4'
-     */
-    0.0
-  }
-  ,
-
-  /* End of '<S48>/MATLAB System4' */
-
-  /* Start of '<S48>/MATLAB System3' */
-  {
-    /* Expression: 0
-     * Referenced by: '<S48>/MATLAB System3'
-     */
-    0.0
-  }
-  ,
-
-  /* End of '<S48>/MATLAB System3' */
-
-  /* Start of '<S48>/MATLAB System2' */
-  {
-    /* Expression: 0
-     * Referenced by: '<S48>/MATLAB System2'
-     */
-    0.0
-  }
-  ,
-
-  /* End of '<S48>/MATLAB System2' */
-
-  /* Start of '<S48>/MATLAB System1' */
-  {
-    /* Expression: 0
-     * Referenced by: '<S48>/MATLAB System1'
-     */
-    0.0
-  }
-  /* End of '<S48>/MATLAB System1' */
 };
 
 /*
