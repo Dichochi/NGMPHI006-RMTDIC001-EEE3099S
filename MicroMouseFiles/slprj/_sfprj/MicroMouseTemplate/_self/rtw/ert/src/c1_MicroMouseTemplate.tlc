@@ -7,7 +7,7 @@
 %endfunction
 %function ChartDataMap(block, system) void
   %createrecord ChartDataElements {\
-    NumChartData   4 \
+    NumChartData   1 \
     ChartDataDefaults {\
       RecordType   "ChartData"\
       Dimensions   []\
@@ -16,27 +16,6 @@
     ChartData {\
       Name         "is_active_c1_MicroMouseTemplate"\
       Description  "StateIsActive"\
-      SFName       ""\
-      Path         ""\
-      SrcLocation  ""\
-    }\
-    ChartData {\
-      Name         "is_c1_MicroMouseTemplate"\
-      Description  "StateActiveChild"\
-      SFName       ""\
-      Path         ""\
-      SrcLocation  ""\
-    }\
-    ChartData {\
-      Name         "is_FORWARDMOVE"\
-      Description  "StateActiveChild"\
-      SFName       ""\
-      Path         "FORWARDMOVE"\
-      SrcLocation  ""\
-    }\
-    ChartData {\
-      Name         "temporalCounter_i1"\
-      Description  "TemporalCounter"\
       SFName       ""\
       Path         ""\
       SrcLocation  ""\

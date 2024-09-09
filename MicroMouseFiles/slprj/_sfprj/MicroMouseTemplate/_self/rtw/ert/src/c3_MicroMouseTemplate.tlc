@@ -7,11 +7,32 @@
 %endfunction
 %function ChartDataMap(block, system) void
   %createrecord ChartDataElements {\
-    NumChartData   3 \
+    NumChartData   6 \
     ChartDataDefaults {\
       RecordType   "ChartData"\
       Dimensions   []\
       IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "RS_Threshold"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "RS_Threshold"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "LS_Threshold"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "LS_Threshold"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "FWD_Threshold"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "FWD_Threshold"\
+      SrcLocation  ""\
     }\
     ChartData {\
       Name         "is_active_c3_MicroMouseTemplate"\

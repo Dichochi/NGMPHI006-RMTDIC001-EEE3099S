@@ -1,6 +1,7 @@
 -IC:/Mouse
 -IC:/ProgramData/MATLAB/SupportPackages/R2024a/toolbox/shared/supportpackages/stm32/include
 -IC:/Mouse/MicroMouseTemplate_ert_rtw/instrumented
+-IC:/Mouse/MicroMouseProgramming/Core/Inc
 -IC:/Mouse/MicroMouseProgramming/Core/Src/instrumented
 -IC:/Program\ Files/MATLAB/R2024a/extern/include
 -IC:/Program\ Files/MATLAB/R2024a/simulink/include
@@ -20,7 +21,6 @@
 -IC:/Mouse/MicroMouseProgramming/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc
 -IC:/Mouse/MicroMouseProgramming/Drivers/CMSIS/Device/ST/STM32L4xx/Include
 -IC:/Mouse/MicroMouseProgramming/Drivers/CMSIS/Include
--IC:/Mouse/MicroMouseProgramming/Core/Inc
 -IC:/Mouse/MicroMouseProgramming/USB_DEVICE/App/instrumented
 -IC:/Mouse/MicroMouseProgramming/USB_DEVICE/Target/instrumented
 -I../../Core/Inc

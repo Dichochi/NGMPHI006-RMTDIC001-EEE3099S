@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'MicroMouseTemplate'.
  *
- * Model version                  : 3.18
+ * Model version                  : 3.26
  * Simulink Coder version         : 24.1 (R2024a) 19-Nov-2023
- * C/C++ source code generated on : Sun Sep  8 01:48:25 2024
+ * C/C++ source code generated on : Mon Sep  9 21:45:25 2024
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -72,13 +72,16 @@ typedef struct {
   uint16_T CastToDouble[8];            /* '<S51>/Cast To Double' */
   uint16_T Flip[8];                    /* '<S6>/Flip' */
   GPIO_TypeDef * portNameLoc;
-  real_T IR_LED_RS;                    /* '<S5>/mean_FWD' */
-  real_T IR_LED_LS;                    /* '<S5>/mean_FWD' */
-  real_T mean_FWD;                     /* '<S5>/mean_FWD' */
   real_T RW_F;                         /* '<S5>/SENSOR_OUTPUT_Processing' */
   real_T RW_B;                         /* '<S5>/SENSOR_OUTPUT_Processing' */
   real_T LW_F;                         /* '<S5>/SENSOR_OUTPUT_Processing' */
   real_T LW_B;                         /* '<S5>/SENSOR_OUTPUT_Processing' */
+  real_T mean_FWD;                     /* '<S5>/IR_LED_CONTROL' */
+  real_T RS;                           /* '<S5>/IR_LED_CONTROL' */
+  real_T LS;                           /* '<S5>/IR_LED_CONTROL' */
+  real_T IR_LED_DOWN;                  /* '<S5>/IR_LED_CONTROL' */
+  real_T IR_LED_FWD;                   /* '<S5>/IR_LED_CONTROL' */
+  real_T IR_LED_SIDES;                 /* '<S5>/IR_LED_CONTROL' */
   real_T maxV;
   real_T maxV_m;
   real_T maxV_c;
@@ -104,15 +107,18 @@ typedef struct {
   stm32cube_blocks_AnalogInput__T obj; /* '<S48>/Analog to Digital Converter' */
   stm32cube_blocks_PWMOutput_Mi_T obj_g;/* '<S42>/PWM Output' */
   stm32cube_blocks_PWMOutput_Mi_T obj_n;/* '<S40>/PWM Output' */
+  real_T RS_Threshold;                 /* '<S5>/SENSOR_OUTPUT_Processing' */
+  real_T LS_Threshold;                 /* '<S5>/SENSOR_OUTPUT_Processing' */
+  real_T FWD_Threshold;                /* '<S5>/SENSOR_OUTPUT_Processing' */
   struct {
     uint_T is_c3_MicroMouseTemplate:3; /* '<S5>/SENSOR_OUTPUT_Processing' */
-    uint_T is_c4_MicroMouseTemplate:2; /* '<S5>/mean_FWD' */
-    uint_T is_active_c4_MicroMouseTemplate:1;/* '<S5>/mean_FWD' */
+    uint_T is_c4_MicroMouseTemplate:2; /* '<S5>/IR_LED_CONTROL' */
     uint_T is_active_c3_MicroMouseTemplate:1;/* '<S5>/SENSOR_OUTPUT_Processing' */
+    uint_T is_active_c4_MicroMouseTemplate:1;/* '<S5>/IR_LED_CONTROL' */
   } bitsForTID0;
 
-  uint8_T temporalCounter_i1;          /* '<S5>/mean_FWD' */
-  uint8_T temporalCounter_i1_i;        /* '<S5>/SENSOR_OUTPUT_Processing' */
+  uint8_T temporalCounter_i1;          /* '<S5>/SENSOR_OUTPUT_Processing' */
+  uint8_T temporalCounter_i1_p;        /* '<S5>/IR_LED_CONTROL' */
   DW_MATLABSystem1_MicroMouseTe_T MATLABSystem6;/* '<S49>/MATLAB System1' */
   DW_MATLABSystem1_MicroMouseTe_T MATLABSystem5;/* '<S49>/MATLAB System1' */
   DW_MATLABSystem1_MicroMouseTe_T MATLABSystem4_c;/* '<S49>/MATLAB System1' */
@@ -155,23 +161,14 @@ struct P_MicroMouseTemplate_T_ {
   real_T Gain_Gain;                    /* Expression: 0.5
                                         * Referenced by: '<S5>/Gain'
                                         */
-  real_T Switch1_Threshold;            /* Expression: 0
-                                        * Referenced by: '<S3>/Switch1'
+  real_T FWD_RSANDFWD_LS_Threshold;    /* Expression: 0
+                                        * Referenced by: '<S3>/FWD_RS AND FWD_LS'
                                         */
-  real_T Switch_Threshold;             /* Expression: 0
-                                        * Referenced by: '<S3>/Switch'
+  real_T DOWN_RSANDDOWN_LS_Threshold;  /* Expression: 0
+                                        * Referenced by: '<S3>/DOWN_RS AND DOWN_LS'
                                         */
-  real_T Constant_Value_a;             /* Expression: 1
-                                        * Referenced by: '<S5>/Constant'
-                                        */
-  real_T Constant1_Value_p;            /* Expression: 0
-                                        * Referenced by: '<S5>/Constant1'
-                                        */
-  real_T LEFT_Threshold;               /* Expression: 2
-                                        * Referenced by: '<S5>/LEFT'
-                                        */
-  real_T RIGHT_Threshold;              /* Expression: 2
-                                        * Referenced by: '<S5>/RIGHT'
+  real_T RSANDLS_Threshold;            /* Expression: 0
+                                        * Referenced by: '<S3>/RS AND LS'
                                         */
   real_T Constant_Value_l;             /* Expression: 1
                                         * Referenced by: '<S4>/Constant'
@@ -348,8 +345,8 @@ extern volatile boolean_T runModel;
  * '<S40>'  : 'MicroMouseTemplate/Motors/PWM Output/ECSoC/ECSimCodegen'
  * '<S41>'  : 'MicroMouseTemplate/Motors/PWM Output1/ECSoC'
  * '<S42>'  : 'MicroMouseTemplate/Motors/PWM Output1/ECSoC/ECSimCodegen'
- * '<S43>'  : 'MicroMouseTemplate/Sensors/SENSOR_OUTPUT_Processing'
- * '<S44>'  : 'MicroMouseTemplate/Sensors/mean_FWD'
+ * '<S43>'  : 'MicroMouseTemplate/Sensors/IR_LED_CONTROL'
+ * '<S44>'  : 'MicroMouseTemplate/Sensors/SENSOR_OUTPUT_Processing'
  * '<S45>'  : 'MicroMouseTemplate/Subsystem/ADC2 IN10  IN1'
  * '<S46>'  : 'MicroMouseTemplate/Subsystem/get Highs and Lows'
  * '<S47>'  : 'MicroMouseTemplate/Subsystem/ADC2 IN10  IN1/ECSoC'

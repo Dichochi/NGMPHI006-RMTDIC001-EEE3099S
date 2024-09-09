@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'MicroMouseTemplate'.
  *
- * Model version                  : 3.18
+ * Model version                  : 3.26
  * Simulink Coder version         : 24.1 (R2024a) 19-Nov-2023
- * C/C++ source code generated on : Sun Sep  8 01:48:25 2024
+ * C/C++ source code generated on : Mon Sep  9 21:45:25 2024
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -42,34 +42,19 @@ P_MicroMouseTemplate_T MicroMouseTemplate_P = {
   0.5,
 
   /* Expression: 0
-   * Referenced by: '<S3>/Switch1'
+   * Referenced by: '<S3>/FWD_RS AND FWD_LS'
    */
   0.0,
 
   /* Expression: 0
-   * Referenced by: '<S3>/Switch'
+   * Referenced by: '<S3>/DOWN_RS AND DOWN_LS'
    */
   0.0,
-
-  /* Expression: 1
-   * Referenced by: '<S5>/Constant'
-   */
-  1.0,
 
   /* Expression: 0
-   * Referenced by: '<S5>/Constant1'
+   * Referenced by: '<S3>/RS AND LS'
    */
   0.0,
-
-  /* Expression: 2
-   * Referenced by: '<S5>/LEFT'
-   */
-  2.0,
-
-  /* Expression: 2
-   * Referenced by: '<S5>/RIGHT'
-   */
-  2.0,
 
   /* Expression: 1
    * Referenced by: '<S4>/Constant'
