@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'MicroMouseTemplate'.
  *
- * Model version                  : 3.26
+ * Model version                  : 3.34
  * Simulink Coder version         : 24.1 (R2024a) 19-Nov-2023
- * C/C++ source code generated on : Mon Sep  9 21:45:25 2024
+ * C/C++ source code generated on : Thu Sep 19 14:55:52 2024
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -77,6 +77,8 @@ typedef struct {
   real_T LW_F;                         /* '<S5>/SENSOR_OUTPUT_Processing' */
   real_T LW_B;                         /* '<S5>/SENSOR_OUTPUT_Processing' */
   real_T mean_FWD;                     /* '<S5>/IR_LED_CONTROL' */
+  real_T D_RS;                         /* '<S5>/IR_LED_CONTROL' */
+  real_T D_LS;                         /* '<S5>/IR_LED_CONTROL' */
   real_T RS;                           /* '<S5>/IR_LED_CONTROL' */
   real_T LS;                           /* '<S5>/IR_LED_CONTROL' */
   real_T IR_LED_DOWN;                  /* '<S5>/IR_LED_CONTROL' */
@@ -85,6 +87,7 @@ typedef struct {
   real_T maxV;
   real_T maxV_m;
   real_T maxV_c;
+  real_T maxV_k;
   boolean_T LED0;                      /* '<S5>/SENSOR_OUTPUT_Processing' */
   boolean_T LED2;                      /* '<S5>/SENSOR_OUTPUT_Processing' */
   boolean_T LED1;                      /* '<S5>/SENSOR_OUTPUT_Processing' */
@@ -110,11 +113,14 @@ typedef struct {
   real_T RS_Threshold;                 /* '<S5>/SENSOR_OUTPUT_Processing' */
   real_T LS_Threshold;                 /* '<S5>/SENSOR_OUTPUT_Processing' */
   real_T FWD_Threshold;                /* '<S5>/SENSOR_OUTPUT_Processing' */
+  real_T errorRef;                     /* '<S5>/SENSOR_OUTPUT_Processing' */
   struct {
     uint_T is_c3_MicroMouseTemplate:3; /* '<S5>/SENSOR_OUTPUT_Processing' */
+    uint_T is_Wait_For_SW1_To_START:2; /* '<S5>/SENSOR_OUTPUT_Processing' */
     uint_T is_c4_MicroMouseTemplate:2; /* '<S5>/IR_LED_CONTROL' */
     uint_T is_active_c3_MicroMouseTemplate:1;/* '<S5>/SENSOR_OUTPUT_Processing' */
     uint_T is_active_c4_MicroMouseTemplate:1;/* '<S5>/IR_LED_CONTROL' */
+    uint_T DO_U_TURN:1;                /* '<S5>/SENSOR_OUTPUT_Processing' */
   } bitsForTID0;
 
   uint8_T temporalCounter_i1;          /* '<S5>/SENSOR_OUTPUT_Processing' */
