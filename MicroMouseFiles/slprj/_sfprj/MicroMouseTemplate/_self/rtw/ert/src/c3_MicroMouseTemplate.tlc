@@ -7,7 +7,7 @@
 %endfunction
 %function ChartDataMap(block, system) void
   %createrecord ChartDataElements {\
-    NumChartData   9 \
+    NumChartData   10 \
     ChartDataDefaults {\
       RecordType   "ChartData"\
       Dimensions   []\
@@ -28,13 +28,6 @@
       SrcLocation  ""\
     }\
     ChartData {\
-      Name         "DO_U_TURN"\
-      Description  "ChartLocal"\
-      SFName       ""\
-      Path         "DO_U_TURN"\
-      SrcLocation  ""\
-    }\
-    ChartData {\
       Name         "FWD_Threshold"\
       Description  "ChartLocal"\
       SFName       ""\
@@ -42,10 +35,24 @@
       SrcLocation  ""\
     }\
     ChartData {\
-      Name         "errorRef"\
+      Name         "RIGHT_Wall"\
       Description  "ChartLocal"\
       SFName       ""\
-      Path         "errorRef"\
+      Path         "RIGHT_Wall"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "LEFT_Wall"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "LEFT_Wall"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "FWD_Wall"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "FWD_Wall"\
       SrcLocation  ""\
     }\
     ChartData {\
@@ -63,10 +70,10 @@
       SrcLocation  ""\
     }\
     ChartData {\
-      Name         "is_Wait_For_SW1_To_START"\
+      Name         "is_ON_MODE"\
       Description  "StateActiveChild"\
       SFName       ""\
-      Path         "Wait_For_SW1_To_START"\
+      Path         "ON_MODE"\
       SrcLocation  ""\
     }\
     ChartData {\
