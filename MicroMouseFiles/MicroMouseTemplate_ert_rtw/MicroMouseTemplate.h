@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'MicroMouseTemplate'.
  *
- * Model version                  : 3.45
+ * Model version                  : 3.47
  * Simulink Coder version         : 24.1 (R2024a) 19-Nov-2023
- * C/C++ source code generated on : Tue Oct 15 16:26:41 2024
+ * C/C++ source code generated on : Thu Oct 17 03:30:57 2024
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -69,7 +69,7 @@ typedef struct {
 
 /* Block signals (default storage) */
 typedef struct {
-  real_T CastToDouble[8];              /* '<S50>/Cast To Double' */
+  uint16_T CastToDouble[8];            /* '<S50>/Cast To Double' */
   uint16_T Flip[8];                    /* '<S6>/Flip' */
   GPIO_TypeDef * portNameLoc;
   real_T IR_LED_DOWN;                  /* '<S5>/SENSOR_OUTPUT_Processing' */
@@ -79,10 +79,9 @@ typedef struct {
   real_T RW_B;                         /* '<S5>/SENSOR_OUTPUT_Processing' */
   real_T LW_F;                         /* '<S5>/SENSOR_OUTPUT_Processing' */
   real_T LW_B;                         /* '<S5>/SENSOR_OUTPUT_Processing' */
+  real_T error;
   real_T maxV;
   real_T maxV_m;
-  real_T maxV_c;
-  real_T maxV_k;
   boolean_T LED0;                      /* '<S5>/SENSOR_OUTPUT_Processing' */
   boolean_T LED2;                      /* '<S5>/SENSOR_OUTPUT_Processing' */
   boolean_T LED1;                      /* '<S5>/SENSOR_OUTPUT_Processing' */
