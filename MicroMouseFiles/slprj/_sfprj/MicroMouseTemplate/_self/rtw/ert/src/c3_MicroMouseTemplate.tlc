@@ -7,7 +7,7 @@
 %endfunction
 %function ChartDataMap(block, system) void
   %createrecord ChartDataElements {\
-    NumChartData   13 \
+    NumChartData   17 \
     ChartDataDefaults {\
       RecordType   "ChartData"\
       Dimensions   []\
@@ -74,6 +74,35 @@
       Description  "ChartLocal"\
       SFName       ""\
       Path         "GOAL_R"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "option"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "option"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "path"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "path"\
+      SrcLocation  ""\
+      Dimensions   [1,500]\
+    }\
+    ChartData {\
+      Name         "j"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "j"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "i"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "i"\
       SrcLocation  ""\
     }\
     ChartData {\
