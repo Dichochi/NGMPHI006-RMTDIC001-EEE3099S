@@ -1,8 +1,8 @@
--IC:/Mouse
+-IC:/Users/user/Documents/GitHub/EEE3099S/MicroMouseFiles
 -IC:/ProgramData/MATLAB/SupportPackages/R2024a/toolbox/shared/supportpackages/stm32/include
--IC:/Mouse/MicroMouseTemplate_ert_rtw/instrumented
--IC:/Mouse/MicroMouseProgramming/Core/Inc
--IC:/Mouse/MicroMouseProgramming/Core/Src/instrumented
+-IC:/Users/user/Documents/GitHub/EEE3099S/MicroMouseFiles/MicroMouseTemplate_ert_rtw/instrumented
+-IC:/Users/user/Documents/GitHub/EEE3099S/MicroMouseFiles/MicroMouseProgramming/Core/Inc
+-IC:/Users/user/Documents/GitHub/EEE3099S/MicroMouseFiles/MicroMouseProgramming/Core/Src/instrumented
 -IC:/Program\ Files/MATLAB/R2024a/extern/include
 -IC:/Program\ Files/MATLAB/R2024a/simulink/include
 -IC:/Program\ Files/MATLAB/R2024a/rtw/c/src
@@ -15,14 +15,14 @@
 -IC:/ProgramData/MATLAB/SupportPackages/R2024a/3P.instrset/cmsis.instrset/CMSIS/Core/Include
 -IC:/ProgramData/MATLAB/SupportPackages/R2024a/3P.instrset/cmsis_dsp.instrset/Include
 -IC:/ProgramData/MATLAB/SupportPackages/R2024a/3P.instrset/cmsis_dsp.instrset/Include/dsp
--IC:/Mouse/MicroMouseProgramming/Drivers/STM32L4xx_HAL_Driver/Inc
--IC:/Mouse/MicroMouseProgramming/Drivers/STM32L4xx_HAL_Driver/Inc/Legacy
--IC:/Mouse/MicroMouseProgramming/Middlewares/ST/STM32_USB_Device_Library/Core/Inc
--IC:/Mouse/MicroMouseProgramming/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc
--IC:/Mouse/MicroMouseProgramming/Drivers/CMSIS/Device/ST/STM32L4xx/Include
--IC:/Mouse/MicroMouseProgramming/Drivers/CMSIS/Include
--IC:/Mouse/MicroMouseProgramming/USB_DEVICE/App/instrumented
--IC:/Mouse/MicroMouseProgramming/USB_DEVICE/Target/instrumented
+-IC:/Users/user/Documents/GitHub/EEE3099S/MicroMouseFiles/MicroMouseProgramming/Drivers/STM32L4xx_HAL_Driver/Inc
+-IC:/Users/user/Documents/GitHub/EEE3099S/MicroMouseFiles/MicroMouseProgramming/Drivers/STM32L4xx_HAL_Driver/Inc/Legacy
+-IC:/Users/user/Documents/GitHub/EEE3099S/MicroMouseFiles/MicroMouseProgramming/Middlewares/ST/STM32_USB_Device_Library/Core/Inc
+-IC:/Users/user/Documents/GitHub/EEE3099S/MicroMouseFiles/MicroMouseProgramming/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc
+-IC:/Users/user/Documents/GitHub/EEE3099S/MicroMouseFiles/MicroMouseProgramming/Drivers/CMSIS/Device/ST/STM32L4xx/Include
+-IC:/Users/user/Documents/GitHub/EEE3099S/MicroMouseFiles/MicroMouseProgramming/Drivers/CMSIS/Include
+-IC:/Users/user/Documents/GitHub/EEE3099S/MicroMouseFiles/MicroMouseProgramming/USB_DEVICE/App/instrumented
+-IC:/Users/user/Documents/GitHub/EEE3099S/MicroMouseFiles/MicroMouseProgramming/USB_DEVICE/Target/instrumented
 -I../../Core/Inc
 -I../../USB_DEVICE/App
 -I../../USB_DEVICE/Target
