@@ -1,2 +1,2 @@
 syscalls.o: \
- C:/Mouse/MicroMouseProgramming/STM32CubeIDE/Application/User/Core/instrumented/syscalls.c
+ C:/Users/user/Documents/GitHub/EEE3099S/MicroMouseFiles/MicroMouseProgramming/STM32CubeIDE/Application/User/Core/instrumented/syscalls.c
