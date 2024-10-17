@@ -1,0 +1,138 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   17 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "RS_Threshold"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "RS_Threshold"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "LS_Threshold"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "LS_Threshold"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "FWD_Threshold"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "FWD_Threshold"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "RIGHT_Wall"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "RIGHT_Wall"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "LEFT_Wall"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "LEFT_Wall"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "FWD_Wall"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "FWD_Wall"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "FINISH"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "FINISH"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "GOAL_L"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "GOAL_L"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "GOAL_R"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "GOAL_R"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "option"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "option"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "path"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "path"\
+      SrcLocation  ""\
+      Dimensions   [1,500]\
+    }\
+    ChartData {\
+      Name         "j"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "j"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "i"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "i"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_active_c3_MicroMouseTemplate"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_c3_MicroMouseTemplate"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_ON_MODE"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "ON_MODE"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "temporalCounter_i1"\
+      Description  "TemporalCounter"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+  }
+  %return ChartDataElements
+%endfunction
